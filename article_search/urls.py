@@ -1,4 +1,4 @@
-"""django_haystack_tutorial_1 URL Configuration
+"""article_search URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -15,10 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from rest_framework.routers import DefaultRouter
+
 from article import views
 
+router = DefaultRouter()
+router.register('users', views.UserViewSet)
+router.register('articles', views.ArticleViewSet)
+router.register('search', views.SearchViewSet, base_name='search')
+
+
 urlpatterns = [
+    url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
-    #url(r'^search/', include('haystack.urls'))
-    url(r'^search/', views.search)
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

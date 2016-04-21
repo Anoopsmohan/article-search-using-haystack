@@ -11,6 +11,8 @@ class ArticleIndex(indexes.SearchIndex, indexes.Indexable):
     author = indexes.CharField(model_attr='author')
     pub_date = indexes.DateTimeField(model_attr='pub_date')
     likes = indexes.IntegerField(model_attr='likes')
+    title = indexes.CharField(model_attr='title')
+    body = indexes.CharField(model_attr='body')
 
     def get_model(self):
         return Article

@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 
 class Article(models.Model):
-    author = models.ForeignKey(User)
+    author = models.ForeignKey(User, related_name='articles')
     pub_date = models.DateTimeField('date published', auto_now_add=True)
     title = models.CharField(max_length=200)
     body = models.TextField()
