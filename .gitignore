@@ -3,3 +3,5 @@
 .idea
 db.sqlite3
 *article_search/whoosh_index/
+staticfiles
+.env
