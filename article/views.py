@@ -1,5 +1,3 @@
-from django.shortcuts import render
-from django.http import HttpResponse
 from django.contrib.auth.models import User
 from haystack.query import SearchQuerySet, EmptySearchQuerySet
 from rest_framework import viewsets
@@ -12,6 +10,9 @@ from article.models import Article
 
 
 class SearchViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    This viewset provides article search results
+    """
     serializer_class = SearchSerializer
 
     def get_queryset(self, *args, **kwargs):
@@ -23,7 +24,6 @@ class SearchViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
             queryset = SearchQuerySet().auto_query(query)
 
         return queryset
-
 
 
 class UserViewSet(viewsets.ReadOnlyModelViewSet):

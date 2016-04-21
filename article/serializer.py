@@ -22,8 +22,6 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class SearchSerializer(serializers.Serializer):
-    #author = serializers.ReadOnlyField(source='author.username')
-
     url = serializers.HyperlinkedIdentityField(view_name='article-detail')
     author = serializers.CharField()
     pub_date = serializers.DateTimeField()
