@@ -1,1 +1,1 @@
-web: gunicorn myproject.wsgi --log-file -
+web: gunicorn django_haystack_tutorial_1.wsgi --log-file -
