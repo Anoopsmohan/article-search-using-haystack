@@ -137,7 +137,7 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 # Rest framework configuration
 REST_FRAMEWORK = {
     #'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
-    'PAGE_SIZE': 5
+    'PAGE_SIZE': 10
 }
 
 # Update database configuration with $DATABASE_URL.
