@@ -44,3 +44,4 @@ python manage.py migrate
 ```
 python manage.py rebuild_index
 ```
+Open http://127.0.0.1:8000/ in browser
