@@ -1,6 +1,8 @@
 ## Article Search using DRF and DH with Whoosh 
 Article search application using django-haystack + Whoosh + django-rest-farmework
 
+### Project Setup
+
 ##### Use virtual env, It is optional but better to use to avoid dependency conflicts [ Skip this step if already have virtual env ]
 ```
 sudo pip install virtualenv
