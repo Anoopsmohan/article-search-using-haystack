@@ -2,3 +2,4 @@
 *local_settings.py
 .idea
 db.sqlite3
+*django_haystack_tutorial_1/whoosh_index/
